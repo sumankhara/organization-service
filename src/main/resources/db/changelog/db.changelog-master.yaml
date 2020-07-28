@@ -1,0 +1,4 @@
+databaseChangeLog:
+    - include:
+        file: organizations-tbl.yaml
+        relativeToChangelogFile: true

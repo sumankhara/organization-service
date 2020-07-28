@@ -1,0 +1,49 @@
+databaseChangeLog:
+- changeSet:
+    id: 2
+    author: sumankhara
+    logicalFilePath: organizations-tbl.yaml
+    changes:
+    - createTable:
+        tableName: organizations
+        remarks: |-
+                longName: organizations
+                description: This table stores organization information.
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: organization_pk
+            name: organization_id
+            type: VARCHAR(50)
+            remarks: |-
+                longName: OrganizationIdentifier
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: VARCHAR(50)
+            remarks: |-
+                longName: name
+        - column:
+            constraints:
+              nullable: false
+            name: contact_name
+            type: VARCHAR(50)
+            remarks: |-
+                longName: contact_name
+        - column:
+            constraints:
+              nullable: false
+            name: contact_email
+            type: VARCHAR(50)
+            remarks: |-
+                longName: contact_email
+        - column:
+            constraints:
+              nullable: false
+            name: contact_phone
+            type: VARCHAR(50)
+            remarks: |-
+                longName: contact_phone
